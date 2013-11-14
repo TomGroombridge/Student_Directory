@@ -1,4 +1,3 @@
-
 # first we print the names of the students
 students = {:name => "", :cohort => :november}
 #and then print them
