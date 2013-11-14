@@ -8,4 +8,4 @@ How To Use
 
 ``` shell
 ruby directory.rb
-```
+```d
