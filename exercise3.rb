@@ -1,4 +1,3 @@
-
 # first we print the names of the students
 students = {:name => "", :cohort => :november}
 #and then print them
@@ -11,7 +10,7 @@ end
 def print (students)
   students.each_with_index do |student,i|
     #this if statement will only print the names of students starting with the letter "A"
-    if student[:name].length >= 8
+    if student[:name][0] == 'A'
       puts "#{i + 1} #{student[:name]} (#{student[:cohort]} cohort)"
     end
   end
