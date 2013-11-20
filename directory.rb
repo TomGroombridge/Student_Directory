@@ -43,10 +43,21 @@ def print_footer (students)
   puts"overall, we have #{students.length} great students"
 end 
 
+def save_students
+  file = File.open("students.csv", "w")
+  @students.each do |student|
+    student_data = [student[:name], student[:cohort]]
+    csv_line = student_data.join(",")
+    file.puts csv_line
+  end
+  file.close 
+  puts "file saved"
+end 
 
 def menu
   puts "1. Input the students"
   puts "2. Show the students"
+  puts "3. save file"
   puts "9. Exit"
 end 
 
@@ -66,12 +77,16 @@ def process
   input_students
   when "2"
   show_students
+  when "3"
+  save_students
   when "9"
   exit  
   else
   "Sorry I do not understand"
   end
 end
+
+
 
 
 def interactive_menu 
